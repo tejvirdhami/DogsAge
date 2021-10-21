@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DogsAge_2013829" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogs_age" translatesAutoresizingMaskIntoConstraints="NO" id="z0M-IA-Dyi">
+                                <rect key="frame" x="20" y="44" width="374" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="yaa-XI-C2Z"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your dogs age to convert into human age" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IG-MG-hjS">
+                                <rect key="frame" x="20" y="318" width="374" height="113"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="113" id="rt2-C5-Nyv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age in years" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xaS-4Y-gZF" userLabel="txtAge">
+                                <rect key="frame" x="98" y="461" width="218" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38.5" id="OCY-rD-GjY"/>
+                                    <constraint firstAttribute="width" constant="218" id="YA0-5y-00w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="btnCheckItOut:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="a4R-mh-Ioi"/>
+                                    <action selector="lblResultChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="zHL-wi-cy9"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJC-Pm-uxO">
+                                <rect key="frame" x="98" y="536" width="218" height="45"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="NSg-Ff-Qtz"/>
+                                    <constraint firstAttribute="height" constant="45" id="omL-vr-2ga"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Check it out!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCheckItOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLA-Pq-leU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The result will be printed here!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2h-6R-x6x" userLabel="lblResult">
+                                <rect key="frame" x="20" y="619" width="374" height="97"/>
+                                <color key="backgroundColor" red="1" green="0.8848191352739726" blue="0.8377300941780822" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="awI-bb-m7G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6IG-MG-hjS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="54z-Or-pXF"/>
+                            <constraint firstItem="z0M-IA-Dyi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="59p-5P-x6g"/>
+                            <constraint firstItem="C2h-6R-x6x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="A6P-ir-BCB"/>
+                            <constraint firstItem="6IG-MG-hjS" firstAttribute="top" secondItem="z0M-IA-Dyi" secondAttribute="bottom" constant="16" id="Hdd-bf-oe4"/>
+                            <constraint firstItem="xaS-4Y-gZF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Irh-lj-TPY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C2h-6R-x6x" secondAttribute="trailing" constant="20" id="Nde-aB-1o9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6IG-MG-hjS" secondAttribute="trailing" constant="20" id="Oaa-J1-bzt"/>
+                            <constraint firstItem="xaS-4Y-gZF" firstAttribute="top" secondItem="6IG-MG-hjS" secondAttribute="bottom" constant="30" id="OiO-xK-c6n"/>
+                            <constraint firstItem="qJC-Pm-uxO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QQV-b7-CPa"/>
+                            <constraint firstItem="qJC-Pm-uxO" firstAttribute="top" secondItem="xaS-4Y-gZF" secondAttribute="bottom" constant="36.5" id="S62-cj-950"/>
+                            <constraint firstItem="z0M-IA-Dyi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zzo-Ct-xJI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z0M-IA-Dyi" secondAttribute="trailing" constant="20" id="bQH-TX-tXK"/>
+                            <constraint firstItem="C2h-6R-x6x" firstAttribute="top" secondItem="qJC-Pm-uxO" secondAttribute="bottom" constant="38" id="fFc-c2-nSE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblResult" destination="C2h-6R-x6x" id="dJH-XJ-m36"/>
+                        <outlet property="txtAge" destination="xaS-4Y-gZF" id="TbD-Xf-ini"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dogs_age" width="424" height="266"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
